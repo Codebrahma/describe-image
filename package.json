@@ -1,19 +1,27 @@
 {
-  "name": "vision",
-  "version": "1.0.0",
+  "name": "describe-image",
+  "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "bin": {
+    "describe-image": "./dist/index.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc --outDir dist",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "i@codeanand.com",
+  "license": "MIT",
   "dependencies": {
-    "@types/base-64": "^1.0.2",
-    "@types/node": "^20.9.0",
     "axios": "^1.6.0",
     "base-64": "^1.0.0",
-    "ts-node": "^10.9.1"
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@types/base-64": "^1.0.2",
+    "ts-node": "^10.9.1",
+    "@types/node": "^20.9.0",
+    "@types/yargs": "^17.0.31"
   }
 }
